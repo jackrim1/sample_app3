@@ -5,6 +5,21 @@
 
 $gray-medium-light: #eaeaea;
 
+/************** misc stuff */
+
+@mixin box_sizing {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.debug_dump {
+	clear: both;
+	float: left;
+	width: 100%;
+	margin-top: 45px;
+	@include box_sizing;
+}
 
 
 /*************** universal */
@@ -139,21 +154,21 @@ aside {
 	margin-top: 15px;
 }
 
-/************** misc stuff */
 
-@mixin box_sizing {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
+/************** forms */
 
-.debug_dump {
-	clear: both;
-	float: left;
+input, textarea, select, .uneditable-input {
+	border: 1px solid #bbb;
 	width: 100%;
-	margin-top: 45px;
+	margin-bottom: 15px;
 	@include box_sizing;
 }
+
+input {
+	height: auto !important;
+}
+
+
 
 
 
